@@ -14,7 +14,48 @@ export type Database = {
   }
   public: {
     Tables: {
-      [_ in never]: never
+      rsvp_responses: {
+        Row: {
+          created_at: string
+          dietary_restrictions: string | null
+          email: string | null
+          guest_count: number
+          id: string
+          is_attending: boolean
+          message: string | null
+          name: string
+          phone: string | null
+          qr_code_token: string | null
+          updated_at: string
+        }
+        Insert: {
+          created_at?: string
+          dietary_restrictions?: string | null
+          email?: string | null
+          guest_count?: number
+          id?: string
+          is_attending: boolean
+          message?: string | null
+          name: string
+          phone?: string | null
+          qr_code_token?: string | null
+          updated_at?: string
+        }
+        Update: {
+          created_at?: string
+          dietary_restrictions?: string | null
+          email?: string | null
+          guest_count?: number
+          id?: string
+          is_attending?: boolean
+          message?: string | null
+          name?: string
+          phone?: string | null
+          qr_code_token?: string | null
+          updated_at?: string
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never
